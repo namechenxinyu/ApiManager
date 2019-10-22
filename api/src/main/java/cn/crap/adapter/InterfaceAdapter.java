@@ -92,6 +92,10 @@ public class InterfaceAdapter {
             dto.setParam("");
         }
 
+		// 增加paramRemarkList
+		List<ParamDto> paramRemarkList = JSONArray.parseArray(model.getParamRemark() == null ? "[]" : model.getParamRemark(), ParamDto.class);
+		dto.setCrShowParamRemarkList(sortParam(null, paramRemarkList, null));
+
         return dto;
     }
 

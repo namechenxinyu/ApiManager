@@ -77,6 +77,32 @@
                 <pre>{{model.param}}</pre>
             </div>
 
+            <h4 class="mt20 mb20 C000">自定义参数备注（Custom）</h4>
+            <div class="pl20" ng-if="model.crShowParamRemarkList == null || model.crShowParamRemarkList.length==0" >
+                无
+            </div>
+            <table class="table table-bordered ml20" ng-if="model.crShowParamRemarkList!=null && model.crShowParamRemarkList.length>0" >
+                <thead>
+                <tr class="BGEEE C000">
+                    <th class="w50"></th>
+                    <th class="tc w100">名称</th>
+                    <th class="tc w100">类型</th>
+                    <th class="tc w100">必须</th>
+                    <th class="tc w300">备注</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in model.crShowParamRemarkList">
+                    <td class="tc" style="color:red;">{{item.deep}}</td>
+                    <td class="C000 pl20">
+                        <div class="m0 f12 fn" style="padding-left: {{item.deep*10}}px;">{{item.name}}</div>
+                    </td>
+                    <td class="tc C000">{{item.type}}</td>
+                    <td class="tc C000">{{item.necessary}}</td>
+                    <td class="tc C000">{{item.remark}}</td>
+                </tr>
+                </tbody>
+            </table>
 
             <table class="table table-bordered ml20" ng-if="model.paramType == 'FORM' && model.crShowParamList.length>0" >
                 <thead>

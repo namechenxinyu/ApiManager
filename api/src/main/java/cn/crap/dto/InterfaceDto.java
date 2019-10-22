@@ -57,6 +57,7 @@ public class InterfaceDto{
     private List<ParamDto> crShowResponseParamList;
     private List<ParamDto> crShowHeaderList;
     private List<ParamDto> crShowParamList;
+    private List<ParamDto> crShowParamRemarkList;
     // 参数类型：FORM、CUSTOM
     private String paramType;
 
@@ -353,5 +354,13 @@ public class InterfaceDto{
 
 	public void setReqContentType(String reqContentType) {
 		this.reqContentType = reqContentType;
+	}
+
+	public List<ParamDto> getCrShowParamRemarkList() {
+		return crShowParamRemarkList;
+	}
+
+	public void setCrShowParamRemarkList(List<ParamDto> crShowParamRemarkList) {
+		this.crShowParamRemarkList = crShowParamRemarkList;
 	}
 }
